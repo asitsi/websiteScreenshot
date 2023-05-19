@@ -1,21 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+  const [websiteUrl, setWebsiteUrl] = useState('https://asitsi.github.io/potfolio/');
+  
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        {websiteUrl && (
+          <img src={`https://api.urlbox.io/v1/T6LcLYJSQb9WkOPJ/jpg?url=${websiteUrl}`} className="App-logo" alt="logo" />
+        )}        
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          My <code>Pofolio website Url</code> to show screenshot to it.
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://asitsi.github.io/potfolio/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          My Potfolio
         </a>
       </header>
     </div>
